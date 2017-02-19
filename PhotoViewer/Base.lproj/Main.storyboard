@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AUr-pe-FU0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Flt-bZ-ZRq">
+            <objects>
+                <navigationController id="AUr-pe-FU0" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AuG-cR-HCc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JzI-x1-IDo" kind="relationship" relationship="rootViewController" id="0gH-0G-3ST"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5N-pi-ZAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471" y="139"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="0Rg-Tj-15V">
+            <objects>
+                <viewController id="JzI-x1-IDo" customClass="AlbumViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Title" id="vlN-lh-iOV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Q03-Vc-zdq">
+                            <connections>
+                                <action selector="tappedTrashButton:" destination="JzI-x1-IDo" id="8KW-2Z-7nM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="09d-ef-iRf" kind="show" identifier="search" id="J6S-A6-U6l"/>
+                        <segue destination="ty1-0K-R3R" kind="show" identifier="viewer" id="zb3-7G-r7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuP-rd-Tmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="137"/>
+        </scene>
+        <!--Viewer View Controller-->
+        <scene sceneID="6QA-kz-dSj">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ty1-0K-R3R" customClass="ViewerViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7IK-PG-gDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="431"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="PuY-Yb-uun">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="09d-ef-iRf" customClass="SearchViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bk3-oy-G4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="-290"/>
+        </scene>
+    </scenes>
+</document>

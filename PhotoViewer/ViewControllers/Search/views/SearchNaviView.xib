@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchNaviView" customModule="PhotoViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="好きな文字を入れて写真を探索！" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="oai-nV-ooL">
+                    <rect key="frame" x="0.0" y="7" width="308" height="30"/>
+                    <color key="backgroundColor" red="0.96851009129999999" green="0.60624039169999999" blue="0.2841870487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evP-H7-I5e" customClass="AnimateButton" customModule="PhotoViewer" customModuleProvider="target">
+                    <rect key="frame" x="320" y="7" width="55" height="30"/>
+                    <color key="backgroundColor" red="0.74405086040496826" green="0.11027481406927109" blue="0.13308918476104736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="YWX-TS-cPg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                    <state key="normal" title="探 索">
+                        <color key="titleColor" red="0.87668198347091675" green="0.73621320724487305" blue="0.28567373752593994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="uD3-KH-dPy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="evP-H7-I5e" firstAttribute="leading" secondItem="oai-nV-ooL" secondAttribute="trailing" constant="12" id="8c0-iw-XtC"/>
+                <constraint firstItem="oai-nV-ooL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="AlU-iS-Ijv"/>
+                <constraint firstItem="evP-H7-I5e" firstAttribute="height" secondItem="oai-nV-ooL" secondAttribute="height" id="Gik-EG-hHu"/>
+                <constraint firstAttribute="bottom" secondItem="oai-nV-ooL" secondAttribute="bottom" constant="7" id="NJI-eG-FLO"/>
+                <constraint firstItem="evP-H7-I5e" firstAttribute="leading" secondItem="oai-nV-ooL" secondAttribute="trailing" constant="12" id="Rem-TZ-Y8X"/>
+                <constraint firstAttribute="trailing" secondItem="evP-H7-I5e" secondAttribute="trailing" id="dgW-p4-wSH"/>
+                <constraint firstItem="oai-nV-ooL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uwr-di-G9m"/>
+                <constraint firstItem="evP-H7-I5e" firstAttribute="centerY" secondItem="oai-nV-ooL" secondAttribute="centerY" id="wj9-Wv-9f1"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="textView" destination="oai-nV-ooL" id="LGc-7M-cCP"/>
+            </connections>
+        </view>
+    </objects>
+</document>

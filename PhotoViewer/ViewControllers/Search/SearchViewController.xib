@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="PhotoViewer" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="dcR-SD-Exh" id="YIg-b1-Jqn"/>
+                <outlet property="indicatorView" destination="yCc-Fw-bml" id="Txu-Mw-DUC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-SD-Exh" customClass="SearchCollectionView" customModule="PhotoViewer" customModuleProvider="target">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="oiK-y2-dQ6">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="yCc-Fw-bml"/>
+            </subviews>
+            <color key="backgroundColor" red="0.87014180421829224" green="0.72237664461135864" blue="0.52764558792114258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yCc-Fw-bml" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ReI-TQ-RNW"/>
+                <constraint firstAttribute="trailing" secondItem="dcR-SD-Exh" secondAttribute="trailing" id="So5-Vm-9KD"/>
+                <constraint firstAttribute="bottom" secondItem="dcR-SD-Exh" secondAttribute="bottom" id="ZZi-MD-wNy"/>
+                <constraint firstItem="dcR-SD-Exh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fkj-V3-D2T"/>
+                <constraint firstItem="dcR-SD-Exh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="idO-KH-giK"/>
+                <constraint firstItem="yCc-Fw-bml" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="x5w-AY-HWu"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

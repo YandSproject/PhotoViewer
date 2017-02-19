@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumViewController" customModule="PhotoViewer" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="987-WU-ytn" id="QbD-g3-Azv"/>
+                <outlet property="searchView" destination="StE-rv-EqZ" id="aqe-22-lZK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_image" translatesAutoresizingMaskIntoConstraints="NO" id="fs1-WP-Jhd">
+                    <rect key="frame" x="8" y="78" width="359" height="575"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="987-WU-ytn" customClass="AlbumCollectionView" customModule="PhotoViewer" customModuleProvider="target">
+                    <rect key="frame" x="8" y="88" width="359" height="555"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qKP-sl-oQ0">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StE-rv-EqZ" customClass="AlbumTextView" customModule="PhotoViewer" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="64" width="375" height="80"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="8bI-Kw-Ofo"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="topConstraint" destination="fHG-Z9-lIg" id="fo3-q0-7XE"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.54606169462203979" green="0.34173756837844849" blue="0.16227003931999207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="StE-rv-EqZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JAp-7a-O9P"/>
+                <constraint firstItem="fs1-WP-Jhd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="RR4-fw-mH2"/>
+                <constraint firstItem="987-WU-ytn" firstAttribute="leading" secondItem="fs1-WP-Jhd" secondAttribute="leading" id="Sp2-0G-jTn"/>
+                <constraint firstItem="StE-rv-EqZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="fHG-Z9-lIg"/>
+                <constraint firstItem="987-WU-ytn" firstAttribute="trailing" secondItem="fs1-WP-Jhd" secondAttribute="trailing" id="gj5-jY-grZ"/>
+                <constraint firstItem="fs1-WP-Jhd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="kqk-Es-3EL"/>
+                <constraint firstAttribute="trailing" secondItem="fs1-WP-Jhd" secondAttribute="trailing" constant="8" id="nJZ-zW-Kpi"/>
+                <constraint firstAttribute="trailing" secondItem="StE-rv-EqZ" secondAttribute="trailing" id="o7K-tZ-zcq"/>
+                <constraint firstItem="987-WU-ytn" firstAttribute="bottom" secondItem="fs1-WP-Jhd" secondAttribute="bottom" constant="-10" id="o86-RB-flR"/>
+                <constraint firstAttribute="bottom" secondItem="fs1-WP-Jhd" secondAttribute="bottom" constant="14" id="r9Q-If-Rdd"/>
+                <constraint firstItem="987-WU-ytn" firstAttribute="top" secondItem="fs1-WP-Jhd" secondAttribute="top" constant="10" id="vUF-01-8nS"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_image" width="80" height="79"/>
+    </resources>
+</document>

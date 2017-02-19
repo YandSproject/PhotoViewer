@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumTextView" customModule="PhotoViewer" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="3rU-56-v7T"/>
+                <outlet property="textView" destination="z9r-8b-nc6" id="T8b-mX-G9f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="（例）猫、犬、ペンギン" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="z9r-8b-nc6">
+                    <rect key="frame" x="12" y="40" width="285" height="30"/>
+                    <color key="backgroundColor" red="0.96851009130477905" green="0.60624039173126221" blue="0.28418704867362976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好きな文字を入れて写真を探索しよう！" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vOQ-H3-JiB">
+                    <rect key="frame" x="8" y="12" width="359" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="keA-am-luH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                    <color key="textColor" red="0.54606169462203979" green="0.34173756837844849" blue="0.16227003931999207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCZ-v2-zt3" customClass="AnimateButton" customModule="PhotoViewer" customModuleProvider="target">
+                    <rect key="frame" x="309" y="40" width="55" height="30"/>
+                    <color key="backgroundColor" red="0.74405086040496826" green="0.11027481406927109" blue="0.13308918476104736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="1tq-vn-N2O"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                    <state key="normal" title="探 索">
+                        <color key="titleColor" red="0.87668198347091675" green="0.73621320724487305" blue="0.28567373752593994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedButton:" destination="-1" eventType="touchUpInside" id="9y2-CR-cEd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="0.7967374559859155" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="z9r-8b-nc6" firstAttribute="top" secondItem="vOQ-H3-JiB" secondAttribute="bottom" constant="7" id="06Q-Bb-xcF"/>
+                <constraint firstItem="vOQ-H3-JiB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="2Xl-me-fK2"/>
+                <constraint firstAttribute="trailing" secondItem="vOQ-H3-JiB" secondAttribute="trailing" constant="8" id="7kZ-71-GVz"/>
+                <constraint firstItem="vOQ-H3-JiB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="HlL-dc-FlL"/>
+                <constraint firstItem="NCZ-v2-zt3" firstAttribute="centerY" secondItem="z9r-8b-nc6" secondAttribute="centerY" id="O2U-mf-4vV"/>
+                <constraint firstAttribute="trailing" secondItem="NCZ-v2-zt3" secondAttribute="trailing" constant="11" id="cMc-IY-2Il"/>
+                <constraint firstItem="NCZ-v2-zt3" firstAttribute="leading" secondItem="z9r-8b-nc6" secondAttribute="trailing" constant="12" id="gV7-7A-MYD"/>
+                <constraint firstAttribute="bottom" secondItem="z9r-8b-nc6" secondAttribute="bottom" constant="10" id="kNA-l8-eXu"/>
+                <constraint firstItem="NCZ-v2-zt3" firstAttribute="height" secondItem="z9r-8b-nc6" secondAttribute="height" id="miE-e6-ufp"/>
+                <constraint firstItem="z9r-8b-nc6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="zje-lt-YdS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="54"/>
+        </view>
+    </objects>
+</document>
